@@ -114,3 +114,9 @@ def test_settings_from_env_reports_problems():
     assert "MATRIX_CONTEXT_ROOMS is empty" in s.problems()
     s = cs.Settings.from_env({"MATRIX_USER_ID": BOT, "MATRIX_CONTEXT_ROOMS": f"{ROOM}, ", "MATRIX_ALLOWED_USERS": OWNER})
     assert s.problems() == [] and s.rooms == {ROOM}
+
+
+def test_render_shows_the_time_zone():
+    rows = [(1_791_882_840, "@a", "A", "x")]
+    assert "2026-10-13 10:14 WEST" in cs.render(rows, 40, 1000, "Europe/Lisbon")
+    assert cs.render(rows, 40, 1000, "UTC").startswith("[2026-10-13 09:14 UTC")
