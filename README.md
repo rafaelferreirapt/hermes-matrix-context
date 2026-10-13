@@ -39,6 +39,7 @@ Opcional:
 | `MATRIX_CONTEXT_MAX_CHARS`      | 12000       | Máximo de caracteres juntados de cada vez                   |
 | `MATRIX_CONTEXT_RETENTION_DAYS` | 30          | Dias que as mensagens ficam guardadas                       |
 | `MATRIX_CONTEXT_BOT_NAMES`      |             | Outros nomes que contam como menção (por exemplo `CFO bot`) |
+| `MATRIX_CONTEXT_TZ` | o fuso da máquina | Fuso das horas no contexto (por exemplo `Europe/Lisbon`) |
 
 ## O que fica guardado
 
