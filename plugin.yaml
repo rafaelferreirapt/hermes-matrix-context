@@ -1,0 +1,6 @@
+name: matrix-context
+version: "0.1.0"
+description: "Mention-only Matrix bot that still knows the room: messages that do not mention the bot (or are not from its owner) in MATRIX_CONTEXT_ROOMS are stored locally and never reach the model; when the owner mentions the bot, what was said since its last turn in that thread is put in front of the message."
+author: "Rafael Ferreira"
+hooks:
+  - pre_gateway_dispatch
